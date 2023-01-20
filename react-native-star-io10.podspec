@@ -16,14 +16,15 @@ Pod::Spec.new do |s|
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/github_account/react-native-star-io10.git", :tag => "#{s.version}" }
 
-  s.source_files = "ios/**/*.{h,m,swift}"
+  # s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true
 
   s.dependency "React"
-  s.pod_target_xcconfig = { 
-    'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'x86_64',
-    'EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*]' => '$(SRCROOT)/../../node_modules/react-native-star-io10/ios/libs/StarIO10.xcframework/ios-arm64_x86_64-simulator/*.*',
-    'FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/libs/** $(SRCROOT)/../../node_modules/react-native-star-io10/ios/libs $(SRCROOT)/../../node_modules/react-native-star-io10/ios/libs/StarIO10.xcframework/ios-arm64',
+  s.pod_target_xcconfig = {
+    # 'EXCLUDED_ARCHS[sdk=iphoneos*]' => 'x86_64',
+    # 'EXCLUDED_SOURCE_FILE_NAMES[sdk=iphoneos*]' => '$(SRCROOT)/../../node_modules/react-native-star-io10/ios/libs/StarIO10.xcframework/ios-arm64_x86_64-simulator/*.*',
+    # 'FRAMEWORK_SEARCH_PATHS[sdk=iphoneos*]' => '$(SRCROOT)/libs/** $(SRCROOT)/../../node_modules/react-native-star-io10/ios/libs $(SRCROOT)/../../node_modules/react-native-star-io10/ios/libs/StarIO10.xcframework/ios-arm64',
+    # 'HEADER_SEARCH_PATHS' => '$(SRCROOT)/../../node_modules/react-native-star-io10/ios/libs/StarIO10.xcframework/ios-arm64',
   }
 
   # ...
